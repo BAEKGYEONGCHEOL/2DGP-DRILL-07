@@ -51,6 +51,10 @@ class Zombie:
         frame_height = self.image.h
         self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height, self.x, self.y, frame_width // 2, frame_height // 2)
 
+class SmallBall:
+    pass
+
+
 def handle_events():
     global running
     events = get_events()
@@ -82,6 +86,10 @@ def reset_world():
     # zombie 를 만들고 world 에 추가
     zombie = Zombie()
     world.append(zombie)
+
+    # smallBalls 를 만들고 world 에 추가
+    smallBalls = [SmallBall() for _ in range(10)]
+    world += smallBalls
 
     pass
 
