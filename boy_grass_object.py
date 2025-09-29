@@ -52,6 +52,17 @@ class Zombie:
         self.image.clip_draw(self.frame * frame_width, 0, frame_width, frame_height, self.x, self.y, frame_width // 2, frame_height // 2)
 
 class SmallBall:
+    def __init__(self):
+        self.x = random.randint(50, 750)
+        self.y = 599
+        self.speed = random.randint(3, 10)
+        self.image = load_image('ball21x21.png')
+
+    def update(self):
+        self.y -= self.speed
+
+    def draw(self):
+        self.image.clip_draw(0, 0, 21, 21, self.x, self.y, 21, 21)
     pass
 
 
