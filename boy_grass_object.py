@@ -69,6 +69,17 @@ class SmallBall:
     pass
 
 class BigBall:
+    def __init__(self):
+        self.x = random.randint(50, 750)
+        self.y = 599
+        self.speed = random.randint(3, 10)
+        self.image = load_image('ball41x41.png')
+
+    def update(self):
+        self.y -= self.speed
+
+    def draw(self):
+        self.image.clip_draw(0, 0, 41, 41, self.x, self.y, 41, 41)
     pass
 
 
