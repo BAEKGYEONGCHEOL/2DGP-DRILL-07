@@ -16,7 +16,6 @@ class Grass:
     def update(self):
         pass
 
-
 class Boy:
     # 생성자함수 초기화수행
     def __init__(self):
@@ -151,6 +150,7 @@ def render_world():
 
 reset_world()
 
+# 게임 루프
 while running:
     handle_events()
     update_world()
