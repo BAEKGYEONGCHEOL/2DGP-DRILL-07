@@ -59,7 +59,10 @@ class SmallBall:
         self.image = load_image('ball21x21.png')
 
     def update(self):
-        self.y -= self.speed
+        if self.y - self.speed > 60:
+            self.y -= self.speed
+        else:
+            self.y = 60
 
     def draw(self):
         self.image.clip_draw(0, 0, 21, 21, self.x, self.y, 21, 21)
