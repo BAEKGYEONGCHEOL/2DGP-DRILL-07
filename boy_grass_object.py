@@ -68,6 +68,9 @@ class SmallBall:
         self.image.clip_draw(0, 0, 21, 21, self.x, self.y, 21, 21)
     pass
 
+class BigBall:
+    pass
+
 
 def handle_events():
     global running
@@ -104,6 +107,10 @@ def reset_world():
     # smallBalls 를 만들고 world 에 추가
     smallBalls = [SmallBall() for _ in range(10)]
     world += smallBalls
+
+    # bigBalls 를 만들고 world 에 추가
+    bigBalls = [BigBall() for _ in range(10)]
+    world += bigBalls
 
     pass
 
